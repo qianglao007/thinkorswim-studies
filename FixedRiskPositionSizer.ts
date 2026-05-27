@@ -27,20 +27,20 @@ def prevSize  = if prevStop > 0 then Round(riskDollars / prevStop, 0) else 0;
 
 # --- Label 显示 ---
 AddLabel(yes,
-    " Prev Bar | Range: $" + Round(prevRange, 4) +
-    " | Stop: $" + Round(prevStop, 4) +
-    " | Size: " + Round(prevSize, 0) + " shares ",
+    " 前一K线 | 振幅: $" + Round(prevRange, 4) +
+    " | 止损距离: $" + Round(prevStop, 4) +
+    " | 仓位: " + Round(prevSize, 0) + " 股 ",
     Color.CYAN);
 
 AddLabel(yes,
-    " Curr Bar | Range: $" + Round(curRange, 4) +
-    " | Stop: $" + Round(curStop, 4) +
-    " | Size: " + Round(curSize, 0) + " shares ",
+    " 当前K线 | 振幅: $" + Round(curRange, 4) +
+    " | 止损距离: $" + Round(curStop, 4) +
+    " | 仓位: " + Round(curSize, 0) + " 股 ",
     Color.GREEN);
 
 AddLabel(yes,
-    " Risk: $" + Round(riskDollars, 2) +
-    " | Buffer: " + Round(bufferCents, 0) + " cents ",
+    " 风险: $" + Round(riskDollars, 2) +
+    " | 缓冲: " + Round(bufferCents, 0) + " 分 ",
     Color.GRAY);
 
 # --- Plot（隐藏，可用于 Watchlist/Custom Column）---
